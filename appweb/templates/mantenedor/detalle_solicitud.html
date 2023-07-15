@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+
+
+<body style="background:linear-gradient(to bottom, #ffae00bb,rgba(255, 0, 0, 0)) no-repeat; ">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <br>
+                <br>
+                <h2 style="text-align: center; font-family: Calibri; font-size: 40px; font-weight: bold;">Detalle Solicitud de Contacto</h2>
+                <br>
+                {% for f in detalle_post %}
+                <div class="card shadow-lg"
+                    style="width: 100%; margin: auto; border: none; background-color: rgb(245, 245, 245)">
+                    <div class="card-body" style="margin: 20px;">
+
+                            <div class="col-12">
+
+                                <div class="card mx-auto" style="width: 100%; border: none;">
+                                    <div class="card-body " style="margin-top: 5px;">
+                                        <div style="font-family: Calibri; font-size: 20px;">
+                                            <div style="color: rgb(0, 0, 87); font-weight: bolder; font-size: 25px;">Nombre </div>
+                                            <div style="font-size: 20px;">{{f.nombre}}</div>
+
+                                            <div style="color: rgb(0, 0, 87); font-weight: bolder; font-size: 25px;">Correo Electrónico </div>
+                                            <div style="font-size: 20px;">{{f.email}}</div>
+
+                                                                                        
+                                            <div style="color: rgb(0, 0, 87); font-weight: bolder; font-size: 25px;">Teléfono </div>
+                                            <div style="font-size: 20px;">{{f.telefono}}</div>
+                                            
+
+                                            <div style="color: rgb(0, 0, 87); font-weight: bolder; font-size: 25px;">Tipo de Contacto </div>
+                                            <div style="font-size: 20px;">
+                                                {% if f.tipo_contacto == 0 %}
+                                                Sugerencia
+                                                {% elif f.estado == 1 %}
+                                                Reclamo
+                                                {% elif f.estado == 2 %}
+                                                Felicitaciones
+                                                {% else %}
+                                                SIN INFORMACION
+                                                {% endif %}
+                                            </div>
+
+ 
+                                            <div style="font-size: 25px; font-weight: bold;">Mensaje</div>
+                                            <div>
+                                                {{f.mensaje | safe}}
+                                            </div>
+                                        </div>
+
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <a style="margin: auto; text-decoration: none" href="{% url 'listar_solicitudes'%}">
+                    <button type="button" class="btn btn-primary mx-auto">Volver</button>
+                </a>
+
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
+</body>
+
+{% endblock %}
+
+</html>

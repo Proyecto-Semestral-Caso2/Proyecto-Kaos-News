@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+  <div class="container mt-5">
+      <div class="text-center">
+        <h2 class="mt-4">Ingresar Autor/Periodista</h2>  
+      </div>
+
+  <table class="table">
+    
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripción</th>
+          <th scope="col"> Opciones </th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for l in listarAdmin %}
+
+        <tr>
+          <th scope="row">{{l.nombre}}</th>
+          <td>{{l.descripcion | safe}}</td>
+          <td>
+            <a href="{% url 'modificar_autor' l.pk %}" class="btn btn-primary btn-sm" >Modificar Autor </a>
+           
+          </td>
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+    <a href="{% url 'registro' %}" class="btn btn-primary btn-sm" >Agregar Autor </a>
+    <a href="{% url 'listar_noticia_admin' %}" class="btn btn-primary btn-sm" >Volver </a>
+    
+  </div>
+
+
+{% endblock %}

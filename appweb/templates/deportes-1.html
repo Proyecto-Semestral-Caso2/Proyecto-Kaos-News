@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+<body>
+<!--CONTENIDO-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <hr>
+                <a href="{% url 'categoria-deportes' %}">
+                    <h2>DEPORTES</h2>
+                </a>
+                <h1>
+                    Jarry quedó eliminado en la primera ronda del ATP de Marrakech, pero clasificó al Masters 1000 de Montecarlo
+                </h1>
+                <h3>Por: <a href="#">Pepito Gomez</a></h3>
+                <h3>04 de Abril, 2023</h3>
+                <hr>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div>
+                    <img class="mainImageStyle" src="{% static './images/jarry.jpg' %}" alt="jarry">
+                </div>
+                
+                <hr>
+                <div class="paragraph">
+                    El tenista chileno Nicolás Jarry (59°) cayó en la primera ronda y quedó eliminado del ATP
+                     de Marrakech, en Marruecos, tras perder en tres sets ante el italiano Andrea Vavassori (52° dobles)
+
+                </div>
+                <div class="h4">
+                    ¿Qué pasó?
+                </div>
+                <div class="paragraph">
+                    El número uno nacional no demostró el nivel que mantuvo durante su participación en el torneo
+                     sudamericano. De esa forma, cayó por 6-2, 3-6 y 6-3 tras dos horas y cuatro minutos de partido.
+                </div>
+                <div class="paragraph">
+                    Vavassori partió fuerte con dos quiebres con los que se hizo la ventaja. Jarry, por su parte, se mostró errático hasta la mitad del segundo set, cuando parecía que había posibilidades de remontar
+                     el encuentro. Sin embargo, en el tercer tramo, el chileno perdió profundidad y acabó por perder el partido.
+                </div>
+                <div class="paragraph">
+                    De esa forma, el chileno fue eliminado del torneo en marruecos en la primera ronda.
+                </div>
+                <div class="paragraph">
+                    De igual forma, el “príncipe” recibió una buena noticia nada más salir del partido, cuando supo que será parte del cuadro principal del Masters 1.000 de Montecarlo. 
+                    Esto luego que Rafael Nadal (14°) y Carlos Alcaraz (2°) anunciaran su baja debido a lesiones
+                </div>
+                    
+                <div class="paragraph">
+                    Al ser el primero en la lista de espera para el torneo, Jarry clasificó por default.
+                </div>
+         
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+        
+    </div>
+</body>
+{% endblock %}

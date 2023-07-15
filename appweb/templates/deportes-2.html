@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+<body>
+<!--CONTENIDO-->
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <hr>
+                <a href="{% url 'categoria-deportes' %}">
+                    <h2>DEPORTES</h2>
+                </a>
+                <h1>Colo Colo recibió duro castigo tras incidentes ante la U: Tres fechas y próximo Superclásico sin público
+                </h1>
+                <h3>Por: <a href="#">John Cena</a></h3>
+                <h3>04 de Abril, 2023</h3>
+                <hr>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div>
+                    <img class="mainImageStyle" src="{% static './images/Incidentes-Superclásico.jpg' %}" alt="incidentes">
+                </div>
+                
+                <hr>
+                <div class="paragraph">
+                    El Tribunal de Disciplina de la ANFP resolvió imponer un duro castigo a Colo Colo 
+                    a raíz de los incidentes ocurridos en el último Superclásico ante Universidad de Chile.
+
+                </div>
+
+                <div class="paragraph">
+                    En concreto, la Primera Sala de la instancia resolvió que el cuadro albo deberá jugar tres
+                     partidos sin público en condición de local.
+                </div>
+                <div class="paragraph">
+                    “La referida sanción deberá ser cumplida en los próximos partidos del Campeonato Nacional de Primera División, 
+                    Temporada 2023, que con posterioridad a la fecha en que presente sentencia sea notificada”, dice el fallo.
+                </div>
+                <div class="paragraph">
+                    Es decir, los dirigidos de Gustavo Quinteros no contarán con su fanaticada 
+                    cuando reciban a Palestino, Audax Italiano y Curicó.
+                </div>
+                <div class="paragraph">
+                    Sin embargo, el Tribunal también dictaminó que el próximo Superclásico que se 
+                    juegue en Macul también sea a puertas cerradas.  
+                </div>
+                
+                <div class="h4">
+                    Las sanciones de Universidad de Chile
+                </div>
+                <div class="paragraph">
+                    Por otro lado, el Tribunal de Disciplina también definió aplicar castigos a 
+                    Universidad de Chile por los desórdenes ocurridos al interior del Monumental. 
+                </div>
+                <div class="paragraph">
+                    “La referida sanción deberá ser cumplida en los primeros tres partidos del Campeonato Nacional de Primera División 2023, con posterioridad a la fecha de la notificación de la presente 
+                    sentencia, le corresponda intervenir al Club Universidad de Chile en calidad de visitante“, indicaron.
+                </div>
+                <div class="paragraph">
+                   
+                </div>
+                
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+        
+    </div>
+</body>
+{% endblock %}

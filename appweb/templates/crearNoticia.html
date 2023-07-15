@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/validaciones.js"></script>
+
+
+
+    <title>Crear Noticia</title>
+
+
+
+
+    <style>
+
+        body {
+            background-color: #191a19;
+        }
+        .center-content {
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <a href="index.html">
+        <img src="images/caosnews fueguito.png" width="50" height="50">
+    </a>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-8" style="margin: auto; margin-top: 10px">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Crear Noticia
+                    </div>
+                    <div class="card-body">
+
+                        <form class="row" action="#" enctype="application/x-www-form-urlencoded" method="POST"
+                            id="registroForm" novalidate>
+
+                            <div class="mb-3">
+                                <label for="titular" class="form-label">Titular</label>
+                                <input type="text" class="form-control" id="titular" placeholder="">
+                                <div class="valid-feedback"> Titular ingresado</div>
+                                <div class="invalid-feedback"> El titular debe contener al menos 8 carácteres y un
+                                    máximo de 50 carácteres</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre_autor" class="form-label">Nombre Autor</label>
+                                <input type="text" class="form-control" id="nombre_autor" placeholder="">
+                                <div class="valid-feedback"> Nombre ingresado</div>
+                                <div class="invalid-feedback"> El nombre debe contener al menos 3 carácteres y un máximo
+                                    de 21 carácteres</div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="apellido_autor" class="form-label">Apellido Autor</label>
+                                <input type="text" class="form-control" id="apellido_autor" placeholder="">
+                                <div class="valid-feedback"> Apellido ingresado</div>
+                                <div class="invalid-feedback"> El Apellido debe contener al menos 3 carácteres y un
+                                    máximo de 36 carácteres</div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="fecha_noticias" class="form-label">Fecha Noticia</label>
+                                <input type="date" class="form-control" id="fecha_noticias" placeholder="">
+                                <div class="valid-feedback"> Fecha seleccionada</div>
+                                <div class="invalid-feedback"> Debe seleccionar una fecha de la publicación</div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="categoria" class="form-label">Categoria</label>
+                                <select id="categoria" class="form-select">
+                                    <option value="">Seleccione una opcion...</option>
+                                    <option value="deporte">Deporte</option>
+                                    <option value="internacional">Internacional</option>
+                                    <option value="chile">Chile</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                                <div class="valid-feedback"> Categoria seleccionada</div>
+                                <div class="invalid-feedback"> Debe seleccionar una Categoria de noticia</div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <label for="imagenes">Imagen Publicación</label>
+                                    <br>
+                                    <input type="file" class="form-control-file" id="imagenes">
+                                </div>
+                                <div id="visorImagen">
+                                    <!--previsualizacion imagen-->
+                                </div>
+                                <div class="valid-feedback"> Imagen seleccionada</div>
+                                <div class="invalid-feedback"> Debe seleccionar una imagen para la noticia</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cuerpo_noti" class="form-label">Cuerpo Noticia</label>
+                                <textarea class="form-control" rows="8" id="cuerpo_noti" placeholder=""></textarea>
+                                <div class="valid-feedback"> Cuerpo de noticia ingresada</div>
+                                <div class="invalid-feedback"> El cuerpo de la noticia es muy corto, al menos ingresar 5 carácteres y un máximo de 1000 carácteres</div>
+                            </div>
+
+
+
+                            <div class="mb-3">
+                                <div class="col-12">
+                                    <button type="submit" id="enviar" style="width: 100%" class="btn btn-primary">Enviar
+                                        Noticia</button>
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="col-12">
+                                    <button type="button" id="crear_borrador" style="width: 100%"
+                                        class="btn btn-success">Crear
+                                        Borrador</button>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                        <div class="mb-3">
+                            <div class="col-12" style="margin: auto; margin-top: 10px">
+
+                                <label for="rut" class="form-label">Borrador de Noticia</label>
+                                <textarea class="form-control" rows="8" id="carta" placeholder=""></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+
+    $(document).ready(function () {
+        //alert("JQUERY OK");
+
+        $("#registroForm").submit(function (event) {
+
+            event.preventDefault();
+
+
+            //Validar titular
+            var titular = $("#titular").val();
+            if (!validarTitular(titular)) {
+                $("#titular").addClass("is-invalid");
+                $("#titular").removeClass("is-valid");
+            }
+            else {
+                $("#titular").addClass("is-valid");
+                $("#titular").removeClass("is-invalid");
+            }
+
+            //Validar nombre autor
+            var nombre = $("#nombre_autor").val();
+            if (!validarNombre(nombre)) {
+                $("#nombre_autor").addClass("is-invalid");
+                $("#nombre_autor").removeClass("is-valid");
+            }
+            else {
+                $("#nombre_autor").addClass("is-valid");
+                $("#nombre_autor").removeClass("is-invalid");
+            }
+
+            //Validar apellido autor
+            var apellido = $("#apellido_autor").val();
+            if (!validarApellido(apellido)) {
+                $("#apellido_autor").addClass("is-invalid");
+                $("#apellido_autor").removeClass("is-valid");
+            }
+            else {
+                $("#apellido_autor").addClass("is-valid");
+                $("#apellido_autor").removeClass("is-invalid");
+            }
+
+            //Validar categoria
+            if ($("#categoria").val() == "") {
+                $("#categoria").addClass("is-invalid");
+                $("#categoria").removeClass("is-valid");
+            }
+            else {
+                $("#categoria").addClass("is-valid");
+                $("#categoria").removeClass("is-invalid");
+            }
+
+
+            //Validar fecha
+            if ($("#fecha_noticias").val() == "") {
+                $("#fecha_noticias").addClass("is-invalid");
+                $("#fecha_noticias").removeClass("is-valid");
+            }
+            else {
+                $("#fecha_noticias").addClass("is-valid");
+                $("#fecha_noticias").removeClass("is-invalid");
+            }
+
+            //Validar titular
+            var cuerpoNoti = $("#cuerpo_noti").val();
+            if (!validarCuerpo(cuerpoNoti)) {
+                $("#cuerpo_noti").addClass("is-invalid");
+                $("#cuerpo_noti").removeClass("is-valid");
+            }
+            else {
+                $("#cuerpo_noti").addClass("is-valid");
+                $("#cuerpo_noti").removeClass("is-invalid");
+            }
+
+
+        });
+
+
+
+
+        $("#crear_borrador").click(function (event) {
+           
+            var titular = $("#titular").val();
+            var nomaut = $("#nombre_autor").val();
+            var apeaut = $("#apellido_autor").val();
+            var fec_noti = $("#fecha_noticias").val();
+            var cuerpo = $("#cuerpo_noti").val();
+
+            var borrador_noticia = "";
+
+            borrador_noticia = "Autor: " + nomaut + " " + apeaut;
+            borrador_noticia = borrador_noticia + "\nTitular: " + titular;
+            borrador_noticia = borrador_noticia + "\nFecha: " + fec_noti;
+            borrador_noticia = borrador_noticia + "\nCuerpo: " + cuerpo;
+
+            //dejamos el mensaje en el input
+            $("#carta").val(borrador_noticia);
+
+
+        });
+
+
+
+    });
+
+</script>
+
+</html>

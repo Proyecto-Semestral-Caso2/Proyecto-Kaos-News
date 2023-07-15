@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+<body>
+<!--CONTENIDO-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <hr>
+                
+                <a href="{% url 'categoria-chile' %}">
+                    <h2>CHILE</h2>
+                </a>
+                <h1>Chile confirma que la escritora Gioconda Belli acepta la ciudadanía de ese país</h1>
+                <h3>Por: <a href="#">Pepito Gomez</a></h3>
+                <h3>23 de Febrero, 2023</h3>
+                <hr>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div>
+                    <img class="mainImageStyle"src="{% static './images/giocondabelli.jpg' %}" alt="Gioconda">
+                </div>
+                
+                <hr>
+                <div class="paragraph">
+                    La escritora Gioconda Belli, una de las personas a las que el régimen de Daniel Ortega condenó el 16 de febrero por 
+                    "traición a la patria" y despojó de la nacionalidad nicaragüense, aceptó el ofrecimiento del gobierno de Chile de 
+                    que adopte la nacionalidad de este país.
+
+                </div>
+
+                <div class="paragraph">
+                    La ministra de Relaciones Exteriores de Chile, Antonia Urrejola, confirmó en su cuenta de Twitter la decisión de la escritora, con quien sostuvo una conversación
+                    telefónica. Además, expresó su profunda admiración por Belli, autora de la novela “La mujer habitada” y del poemario “Mi íntima multitud”, entre otras obras.
+                </div>
+                <div class="paragraph">
+                    El domingo 19 de febrero, días después de haber sido despojada de su nacionalidad, Belli cortó una hoja de su pasaporte nicaragüense durante una entrevista 
+                    emitida en vivo por la cadena española RTVE Noticias, como protesta por la medida adoptada por el gobierno de Ortega.
+                </div>
+                <div class="paragraph">
+                    "Que quede claro que no me van a amilanar y que no voy a dejar de ser quien soy por no tener este documento", dijo la escritora ante las cámaras de televisión,
+                    mientras cortaba su pasaporte con una tijera.
+                </div>
+                <div class="paragraph">
+                    Cabe recordar que desde que se conoció el despojo de la ciudadanía nicaragüense a los activistas y opositores políticos enfrentados con el régimen de Ortega, 
+                    los gobiernos de Argentina, México, Colombia y España también han ofrecido darles nacionalidad a las personas afectadas por la medida.
+                </div>
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+        
+    </div>
+</body>
+{% endblock %}

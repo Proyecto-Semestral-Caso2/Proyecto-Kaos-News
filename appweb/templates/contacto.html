@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+<script src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+
+<body style="background:linear-gradient(to bottom, #ffae00bb,rgba(255, 0, 0, 0)) no-repeat; ">
+
+      
+
+	<div class="container mt-5">
+		<div class="col-6" style="margin:auto;">
+            <div class="card shadow p-3 mb-5 bg-grey rounded" style="width: 100%; margin: auto; margin-top: 200px; border: 0; background-color: rgb(245, 245, 245);" >
+                <div class="card-body" style="margin: 30px">
+                    <h1 class="text-center" style="font-family: calibri; margin-bottom: 30px; color:rgb(0, 0, 95); font-weight: bold;">Contacto</h1>                  
+                    <div class="mb-3">
+		<div class="text-center">
+		  <img src="{% static './images/contacto.jpg' %}" alt="" style="width: 100%;" >
+		</div>
+		<br>
+		<form id="formularioContacto" method="POST" action="">
+			{% csrf_token %}
+			{{ form | crispy | safe}}
+		  <button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
+			{{mensaje}}
+	  </div>
+
+</body>
+
+{% endblock %}

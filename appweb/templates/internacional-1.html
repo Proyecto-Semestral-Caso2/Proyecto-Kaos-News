@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+<body>
+<!--CONTENIDO-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <hr>
+                <a href="{% url 'categoria-internacional' %}">
+                    <h2>INTERNACIONAL</h2>
+                </a>
+                <h1>
+                    Tragedia en Brasil: Hombre mató a cuatro niños con un hacha en una guardería
+                </h1>
+                <h3>Por: <a href="#">John Cena</a></h3>
+                <h3>05 de Abril, 2023</h3>
+                <hr>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div>
+                    <img class="mainImageStyle" src="{% static './images/jardin.jpg' %}" alt="Tragedia">
+                </div>
+                
+                <hr>
+                <div class="paragraph">
+                    (EFE/CNN Chile) – Al menos cuatro niños murieron este miércoles y tres resultaron heridos en
+                     un ataque a una guardería en la ciudad de Blumenau, en el sur de Brasil, según informó el Cuerpo de Bomberos.
+
+                </div>
+
+                <div class="paragraph">
+                    Un hombre de 25 años ingresó a la guardería con un arma blanca, específicamente un hacha, atacó a los menores
+                     y después se entregó a las autoridades, de acuerdo con la Policía Militar, citada por medios locales.
+                </div>
+                <div class="paragraph">
+                    Este ataque se produce 10 días después de otro que tuvo lugar en un colegio de Sao Paulo, 
+                    donde un adolescente de 13 años mató a cuchilladas a una profesora e hirió a otras cuatro personas.
+                </div>
+                <div class="paragraph">
+                    “Fueron confirmados cuatro menores fallecidos y tres fueron trasladados al hospital“, indicó el Cuerpo de Bomberos, que informó
+                     de que “otros órganos de seguridad pública” también están actuando en la zona para investigar el episodio.
+                </div>
+                <div class="paragraph">
+                    Por el momento, se desconoce el estado de salud de los heridos, aunque la prensa local señala que hay 
+                    al menos un niño con un cuadro clínico grave.
+                </div>
+                <div class="paragraph">
+                    En los últimos meses, se han repetido agresiones similares en otros centros educativos de Brasil, 
+                    un país que hasta hace poco no estaba acostumbrado a estos actos violentos.
+                </div>
+                
+                <div class="h4">
+                    Mensaje del presidente
+                </div>
+                <div class="paragraph">
+                    El presidente de Brasil, Luiz Inácio Lula da Silva, entregó sus condolencias tras el ataque. “No hay mayor
+                     dolor que el de una familia que pierde a sus hijos o nietos, más aún en un acto de violencia contra niños inocentes e indefensos”, escribió en Twitter.
+                </div>
+                <div class="paragraph">
+                    A él se suma el gobernador de Santa Catarina, Jorginho Mello, quien expresó su solidaridad con las víctimas. 
+                    “Que Dios consuele los corazones de todas las familias en este momento de profundo dolor”.
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        
+    </div>
+</body>
+{% endblock %}

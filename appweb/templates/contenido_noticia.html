@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+<div class="container-fluid " style="margin-bottom: 60px;">
+
+    <div class="row">
+
+        <div class="col-3"></div>
+        <div class="col-6">
+
+            <hr>
+            {% for n in contenido_noti   %}
+            
+            <a href="{% url 'categoria-chile' %}">
+                <h2>{{n.categoria}}</h2>
+            </a>
+            <h1>{{n.titulo}}</h1>
+            <h3>Por: <a href="#">{{n.autor}}</a></h3>
+            <h3>{{n.fecha}}</h3>
+            <hr>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+
+        <div class="col-6">
+            {% if n.imagen %}
+            <div>
+                <img class="mainImageStyle" src="{{n.imagen.url}}" alt="">
+            </div>
+            {% else %}
+            <div>
+                <img class="mainImageStyle" src="{% static './images/placeholder.png' %}" alt="">
+            </div>
+            {% endif %}
+            <hr>
+            <div class="paragraph">
+                {{n.cuerpo|safe}}
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}

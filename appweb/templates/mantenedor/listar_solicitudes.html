@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+<body style="background:linear-gradient(to bottom, #ffae00bb,rgba(255, 0, 0, 0)) no-repeat; ">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <br>
+        <h2>Solicitudes Contacto</h2>
+        <br>
+
+        <div class="card" style="width: 100%; margin: auto; border: none;">
+          <div class="card-body" style="margin: 20px;">
+            <table class="table table-sm">
+
+              <thead>
+                <tr>
+
+                  <th scope="col"></th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Correo</th>
+                  <th scope="col">Tipo de Contacto</th>
+                  <th scope="col"></th>
+
+
+                </tr>
+                {% if listarSolicitud %}
+                {% for p in listarSolicitud %}
+              </thead>
+              <tbody>
+                  
+                <tr>
+                  <th scope="row"></th>
+
+                  <td>
+                    <a style="text-decoration: none; color: black;" href="{% url 'detalle_solicitudes' p.pk %}">{{p.nombre}}</a>
+                    
+                  </td>
+
+                  <td>{{p.email}}</td>
+
+                  <td>
+                    <a style="text-decoration: none; color: black;" href="{% url 'detalle_solicitudes' p.pk %}"> 
+                    {% if p.tipo_contacto == 0 %}
+                    Sugerencia
+                    {% elif l.estado == 1 %}
+                    Reclamo
+                    {% elif l.estado == 2 %}
+                    Felicitaciones
+                    {% else %}
+                    SIN INFORMACION
+                    {% endif %}
+                  </a>
+                  </td>
+                  {% endfor %}
+                 
+              </tbody>
+              {% else %}
+              <h1>No hay registro de Contacto</h1>
+
+              {% endif %}
+            </table>
+            
+
+          </div>
+          
+        </div>
+        <br>
+        <a href="{% url 'listar_noticia_admin' %}" class="btn btn-primary btn-sm" >Volver </a>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+
+</body>
+
+
+{% endblock %}
+
+</html>

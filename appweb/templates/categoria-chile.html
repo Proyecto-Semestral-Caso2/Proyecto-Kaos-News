@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <hr>
+        <a style="text-decoration: none;" href="{% url 'categoria-chile' %}">
+          <h1 id="categoria">Chile</h1>
+        </a>
+
+        {% for c in categoriaChile %}
+        <section id="feed-de-news">
+          <div class="news-block">
+            <div class="uno">
+
+              <a style="text-decoration: none; color: black; " href="{% url 'contenido_noticia' c.pk %}">
+                <h1>{{c.titulo}}</h1>
+              </a>
+
+              <p>{{c.subtitulo}}</p>
+              <img href="" src="{{c.imagen.url}}" class="d-block w-100" alt="Desalojo">
+            </div>
+
+        </section>
+        <hr>
+        {% endfor %}
+
+      </div>
+      <div class="col-6"></div>
+
+    </div>
+  </div>
+
+</body>
+{% endblock %}

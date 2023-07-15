@@ -1,0 +1,149 @@
+
+
+/*
+body{
+    display: grid;
+    margin:0;
+    min-height: 100vh;
+
+}
+
+.footer{
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    position: absolute;
+}
+*/
+
+
+nav{
+
+    background:linear-gradient(to bottom, #ffae00bb,rgba(255, 0, 0, 0));
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: red;
+    font-weight:normal;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#categoria{
+    font-family: Calibri;
+    font-size: 60px;
+    color:rgb(0, 0, 95);
+    font-weight: bold;
+    margin-top: 50px;
+
+}
+h1{
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h2{
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 28px;
+    color:rgb(0, 0, 95);
+    font-weight: bolder;
+    text-align: left;
+    margin-top: 50px;
+}
+
+h3{
+
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    color: gray;
+}
+
+h4{
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.carousel{
+
+    margin-top: 50px;
+    display: block;
+    font-size: 10px;
+}
+
+.mainImageStyle{
+
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+#feed-de-news .news-block{
+
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    
+}
+
+#feed-de-news .uno{
+
+    margin-right:25px;
+    width: 50%;
+}
+
+#feed-de-news .dos{
+ 
+    margin-left: 25px;
+    width: 50%;
+    flex-grow: 1;
+}
+
+
+#feed-de-news h1{
+
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: bold;
+    
+
+}
+#feed-de-news p{
+    font-family: Calibri;
+    font-size: 13px;
+    color: grey;
+  
+}
+
+.delanoticiachica{
+
+    height: 60px;
+    width:40px;
+}
+
+.paragraph{
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

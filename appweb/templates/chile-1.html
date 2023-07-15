@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+<body>
+<!--CONTENIDO-->
+<div class="container-fluid " style="margin-bottom: 60px;">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <hr>
+            <a href="{% url 'categoria-chile' %}">
+                <h2>CHILE</h2>
+            </a>
+            <h1>Realizan desalojo en cité de Estación Central tras denuncias por tráfico de drogas</h1>
+            <h3>Por: <a href="#">Eddy Ficio</a></h3>
+            <h3>05 de Marzo, 2023</h3>
+            <hr>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div>
+                <img class="mainImageStyle"src="{% static './images/Desalojo-de-cité-en-Estación-Central.jpeg' %}" alt="Desalojo">
+            </div>
+            
+            <hr>
+            <div class="paragraph">
+                Este miércoles se realizó un nuevo desalojo de un inmueble habitado irregularmente 
+                (cité) en la calle Wenceslao Sánchez, en Estación Central, tras numerosas denuncias 
+                de vecinos por tráfico de drogas. Al lugar acudieron el alcalde de la comuna,
+                 Felipe Muñoz y la delegada presidencial de la Región Metropolitana, Constanza Martínez.
+                  El jefe comunal indicó que este “era un sector que estaba sujeto a muchas prácticas 
+                  delictuales, como el tráfico de drogas”. Por su parte, la delegada señaló que este es 
+                  el octavo desalojo con este modus operandi en el último tiempo”.
+
+            </div>
+
+        </div>
+        <div class="col-3"></div>
+    </div>
+    
+</div>
+</body>
+{% endblock %}

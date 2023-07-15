@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<script>
+  function eliminarNoticia(pk) {
+
+    Swal.fire({
+      title: '¿Realmente desea eliminar la noticia?',
+      showDenyButton: true,
+      confirmButtonText: 'Si',
+      denyButtonText: 'No',
+    }).then(function (result) {
+
+      if (result.isConfirmed) {
+
+        window.location.href = "/mantenedor/eliminarNoticiaAdmin/" + pk;
+
+        Swal.fire('Se eliminó la noticia', '', 'success');
+
+      }
+    })
+  }
+</script>
+<div class="container mt-5">
+  <div class="text-center">
+    <h2 class="mt-4">Noticias Ingresadas por Autores</h2>
+  </div>
+
+  <table class="table">
+
+    <thead>
+      <tr>
+        <th scope="col">Categoria</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Fecha</th>
+        <th scope="col"> Estado </th>
+        <th scope="col"> Motivo </th>
+        <th scope="col"> Opciones </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for l in listarAdmin %}
+
+      <tr>
+        <th scope="row">{{l.categoria}}</th>
+        <td>{{l.titulo}}</td>
+        <td>{{l.autor}}</td>
+        <td>{{l.fecha}}</td>
+        <td>
+          {% if l.estado == 0 %}
+          Creada
+          {% elif l.estado == 1 %}
+          Aprobada
+          {% elif l.estado == 2 %}
+          Rechazada
+          {% else %}
+          SIN INFORMACION
+          {% endif %}
+        </td>
+        <td>{{l.motivo}}</td>
+        <td>
+          <a href="{% url 'modificar_noticia_admin' l.pk %}" class="btn btn-primary btn-sm">Modificar Noticia </a>
+          <a href="#" onclick="eliminarNoticia('{{l.pk}}')" class="btn btn-danger btn-sm">Eliminar Noticia </a>
+
+        </td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+  <a href="{% url 'listar_autor' %}" class="btn btn-primary btn-sm">Ver/Crear Autores </a>
+  <a href="{% url 'listar_solicitudes' %}" class="btn btn-primary btn-sm">Solicitudes Contacto </a>
+</div>
+
+
+{% endblock %}

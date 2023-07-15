@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+{% load crispy_forms_tags %}
+<script src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+
+<body style="background:linear-gradient(to bottom, #ffae00bb,rgba(255, 0, 0, 0)) no-repeat; ">
+
+	<div class="container mt-5">
+        <div class="col-6" style="margin:auto;">
+            <div class="card shadow p-3 mb-5 bg-grey rounded" style="width: 100%; margin: auto; margin-top: 200px; border: 0; background-color: rgb(245, 245, 245);" >
+                <div class="card-body" style="margin: 30px">
+                    <h1 class="text-center" style="font-family: calibri; margin-bottom: 30px; color:rgb(0, 0, 95); font-weight: bold;">Modificar Noticia</h1>                  
+                    <div class="mb-3">
+		<form id="formularioModificarAdmin" method="POST" action="" enctype="multipart/form-data">
+            {{mensaje}}
+			{% csrf_token %}
+			{{ form_modiadmin | crispy }}
+            <div class="mb-3 text-center">
+            <button type="submit" class="btn btn-primary" style="background-color: rgb(0, 0, 95); border: none; width: 30%;">Modificar</button>
+        </form>
+			
+	  </div>
+
+</body>
+{% endblock %}
